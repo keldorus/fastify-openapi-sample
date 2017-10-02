@@ -1,20 +1,24 @@
 const path = require('path');
 
 const fastify = require('fastify')();
+const fastifyOpenAPI = require('fastify-openapi');
+
 
 const opts = {
-    openapi : path.join('.', 'openapi', 'openapi.yaml');
+  openapi: path.join('.', 'openapi', 'openapi.yaml'),
 };
 
-fastify.register([
-  require('fastify-openapi'),
-],
-opts,
-(err) => {
-  if (err) {
-    throw err;
-  }
-});
+fastify.register(
+  [
+    fastifyOpenAPI,
+  ],
+  opts,
+  (err) => {
+    if (err) {
+      throw err;
+    }
+  },
+);
 
 fastify.listen(3000, (err) => {
   if (err) {
