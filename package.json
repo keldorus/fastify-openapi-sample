@@ -4,6 +4,7 @@
   "description": "Sample for fastify-OpenAPI",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon index.js",
     "lint": "eslint .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

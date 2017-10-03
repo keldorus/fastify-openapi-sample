@@ -5,7 +5,7 @@ const fastifyOpenAPI = require('fastify-openapi');
 
 
 const opts = {
-  openapi: path.join('.', 'openapi', 'openapi.yaml'),
+  openapi: path.join(__dirname, 'openapi', 'openapi.yaml'),
 };
 
 fastify.register(
