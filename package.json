@@ -32,6 +32,6 @@
   },
   "dependencies": {
     "fastify": "^0.29.2",
-    "fastify-openapi": "git+https://github.com/agiordanengo/fastify-openapi.git"
+    "fastify-openapi": "^0.0.1"
   }
 }
