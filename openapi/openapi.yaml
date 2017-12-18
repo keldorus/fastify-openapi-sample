@@ -8,8 +8,8 @@ servers:
   - url: http://petstore.swagger.io/v1
 paths:
   /pets:
+    x-controller: hello
     get:
-      x-controller: hello
       summary: List all pets
       operationId: listPets
       tags:
@@ -41,7 +41,6 @@ paths:
               schema:
                 $ref: "#/components/schemas/Error"
     post:
-      x-controller: hello
       summary: Create a pet
       operationId: createPets
       tags:
@@ -56,8 +55,8 @@ paths:
               schema:
                 $ref: "#/components/schemas/Error"
   /pets/{petId}:
+    x-controller: hello
     get:
-      x-controller: hello
       summary: Info for a specific pet
       operationId: showPetById
       tags:
